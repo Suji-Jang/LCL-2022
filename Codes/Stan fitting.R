@@ -15,7 +15,7 @@ options(mc.cores = parallel::detectCores())
 rstan_options(auto_write = TRUE)
 
 # Preparing data for stan fitting
-dirpath <- file.path("GitHub Data and Codes")
+dirpath <- file.path("Data")
 lcl_dat <- read.csv(file.path(dirpath,"LCL_data_040722.csv"))
 lcl_dat <- subset(lcl_dat,Chem_index!=0)  # Removing DMSO data
 lcl_dat$Chem <- factor(lcl_dat$Chem)
